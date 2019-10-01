@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <head>
-    <link rel = "stylesheet" type = "text/css" href = "Style.css" />
     <script type="text/javascript" src="app.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "Style.css" />
+    
 </head>
+
+<body>
+  <h1 id="Title">Welcome to our calorie counter</h1>
+  <button onclick="document.getElementById('login-form')">Login</button>
+  <div id="login-form" class="simpleLogin">
+    <div class="container">
+      <label for="user">Username</label>
+      <input type="text" placeholder="Username" name="user" required>
+
+      <label for="pass">Password</label>
+      <input type="password" placeholder="Password" name="pass" required>
+    </div>
+  </div>
+</body>
