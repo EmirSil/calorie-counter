@@ -1,11 +1,7 @@
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+//Sum function
+function calculate() {
+   var n1 = Number(document.getElementById("numb1").value);
+   var n2 = Number(document.getElementById("numb2").value);
+   sum= n1 + n2;
+   var Result = document.getElementById("Result").innerHTML = sum;
+};

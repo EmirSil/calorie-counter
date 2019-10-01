@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
     <script type="text/javascript" src="app.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "Style.css" />
+    <!--<link rel = "stylesheet" type = "text/css" href = "Style.css" />-->
     
 </head>
 
 <body>
-  <h1 id="Title">Welcome to our calorie counter</h1>
+  <!--
   <button onclick="document.getElementById('login-form')">Login</button>
   <div id="login-form" class="simpleLogin">
     <div class="container">
@@ -16,5 +16,19 @@
       <label for="pass">Password</label>
       <input type="password" placeholder="Password" name="pass" required>
     </div>
+  </div> -->
+  <h1 id="Title">Welcome to our calorie counter</h1>
+  <div id="summ">
+    <label for="num1">Number 1</label>
+    <input type="number" id="numb1" placeholder="Enter first number" name="number1">
+
+    <label for="num2">Number 2</label>
+    <input type="number" id="numb2" placeholder="Enter second number" name="number2">
   </div>
+  
+      <input type="button" name="Sumbit" value="Click here" onclick="calculate()">
+
+      <span id = "Result"></span>
+      
+
 </body>
