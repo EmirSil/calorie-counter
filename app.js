@@ -17,3 +17,8 @@ function calculate() {
    }
    var Result = document.getElementById("Result").innerHTML = sum;
 };
+
+function changeColor() {
+    var col = document.getElementById("chng").value;
+    document.getElementById("cnv").style.backgroundColor = "col";
+}
