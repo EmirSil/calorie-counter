@@ -42,11 +42,19 @@
     <div id="cnv">
       <h2>This thing works?</h2>
     </div>
-    <form id="boxcolor">
+   
       <input id="chng" type="text" placeholder="enter your desired color">
-      <button id="changeit" type="submit" onclick="changeColor()">Change Color</button>
+      <button id="changeit"  onclick="changeColor()">Change Color</button>
 
       </button>
-    </form>
+      
+    
+  <div id="listing">
+    <input id="rantxt" type="text" placeholder="input text" onkeypress="javascript:fillist(event);">
+    <input type='button' value="random" id="adder">
+
+    <ul id='lista'></ul>
+
+  </div>  
 
 </body>
