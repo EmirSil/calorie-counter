@@ -28,15 +28,15 @@ function changeColor() {
 
 
 function fillist() {
-    
+   
     
    
     document.getElementById("rantxt").onkeypress = function(event){
-        if (event.keyCode == 13 || event.which == 13){
-            //document.getElementById("lista").appendChild(node);
+        if (event.keyCode == 13 || event.which == 13){            
             var node = document.createElement("Li");
             node.innerHTML = document.getElementById("rantxt").value;
             document.getElementById("lista").appendChild(node);
+            document.getElementById("rantxt").value ="";
             
         }
 
