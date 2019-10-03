@@ -44,9 +44,21 @@ function fillist() {
     
 }
 
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open ("GET", "https://jsonplaceholder.typicode.com/users?fbclid=IwAR1TMLF5lIRm3SpZr6ufDjAg1MzrT9ntpdMWj-XYxJd1PKtiEIRxX7_Rvrw", true);
+xmlHttp.send();
+xmlHttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        const test= JSON.parse(this.responseText);
+        let output='';
+        for (var i = 0; i< test.length; i++){
+            output += '<li>' + test[i].id + ', ' + test[i].name + ', ' + test[i].username;
+        document.getElementById("tablediv").innerHTML = output;
+        
+        }
+        
+    }
+       
+};
 
-
-
-
-
-
+   
