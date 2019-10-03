@@ -28,12 +28,25 @@ function changeColor() {
 
 
 function fillist() {
-    var textnode= document.createTextNode(rantxt);
     
+    
+   
     document.getElementById("rantxt").onkeypress = function(event){
         if (event.keyCode == 13 || event.which == 13){
-            document.getElementById("lista").appendChild(textnode);
+            //document.getElementById("lista").appendChild(node);
+            var node = document.createElement("Li");
+            node.innerHTML = document.getElementById("rantxt").value;
+            document.getElementById("lista").appendChild(node);
+            
         }
+
     };
-    console.log(textnode);
+    
 }
+
+
+
+
+
+
+
