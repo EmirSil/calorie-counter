@@ -8,3 +8,8 @@
 #listing {
     padding-top:10%;
 }
+
+#tablediv, th, td {
+    border: 1px solid black;
+    
+}

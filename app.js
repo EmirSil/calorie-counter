@@ -2,7 +2,7 @@
 function calculate() {
    var n1 = Number(document.getElementById("numb1").value);
    var n2 = Number(document.getElementById("numb2").value);
-   //var opt =document.getElementById("sel").value;
+   
    if(document.getElementById('sel').value == "suma") {
        sum = n1 + n2;
 }
@@ -17,7 +17,7 @@ function calculate() {
    }
    var Result = document.getElementById("Result").innerHTML = sum;
 };
-
+//CHANGE BOX COLOR
 function changeColor() {
     var col = document.getElementById("chng").value;
     document.getElementById("cnv").style.backgroundColor = col;
@@ -26,7 +26,7 @@ function changeColor() {
 
     console.log(document.getElementById("chng"));
 
-
+//FILL LIST WITH TEXT INPUT
 function fillist() {
    
     
@@ -43,7 +43,7 @@ function fillist() {
     };
     
 }
-
+//POPULATE THE TABLE
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open ("GET", "https://jsonplaceholder.typicode.com/users?fbclid=IwAR1TMLF5lIRm3SpZr6ufDjAg1MzrT9ntpdMWj-XYxJd1PKtiEIRxX7_Rvrw", true);
 xmlHttp.send();
@@ -52,13 +52,36 @@ xmlHttp.onreadystatechange = function() {
         const test= JSON.parse(this.responseText);
         let output='';
         for (var i = 0; i< test.length; i++){
-            output += '<li>' + test[i].id + ', ' + test[i].name + ', ' + test[i].username;
+            output += "<tr><td>" + test[i].id + "</td>" + "<td>" + test[i].name + "</td>" + "<td>" + test[i].username +"</td>" + "<td>" + test[i].email + "</td>" + "<td></tr>";
         document.getElementById("tablediv").innerHTML = output;
         
         }
-        
+        const entries = Object.entries(test);
+        console.log(entries);
     }
        
 };
 
+//FILTER THE TABLE
+function myFilter() {
+    var input, filter, table, tr, td, i, entry;
+    input = document.getElementById("searchinput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tablediv");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            entry = td.textContent || td.innerText;
+            if (entry.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+
+            } 
+            else {
+                tr[i].style.display ="none";
+            }
+        }
+    }
+
+}
    
