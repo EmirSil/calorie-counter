@@ -53,7 +53,7 @@ xmlHttp.onreadystatechange = function() {
         let output='';
         for (var i = 0; i< test.length; i++){
             output += "<tr><td>" + test[i].id + "</td>" + "<td>" + test[i].name + "</td>" + "<td>" + test[i].username +"</td>" + "<td>" + test[i].email + "</td>" + "<td></tr>";
-        document.getElementById("tablediv").innerHTML = output;
+        document.getElementById("filling").innerHTML = output;
         
         }
         const entries = Object.entries(test);
@@ -70,7 +70,7 @@ function myFilter() {
     table = document.getElementById("tablediv");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
             entry = td.textContent || td.innerText;
             if (entry.toUpperCase().indexOf(filter) > -1) {
