@@ -1,7 +1,7 @@
 <template>
-    <div> 
-        <h2>Name: {{name}}</h2>
-        <h2>Age: {{age}}</h2>
+    <div>
+        <div style="height: 100px; width: 100px;"></div>
+        <input type="text" v-model="color">
     </div>
 </template>
 <script>
@@ -11,14 +11,22 @@
         //FPage...
         name: "FPage",
 
+        //This is a !lifecycle hook!
+        //This will run command you place inside of it
+        //based on what lifecycle hook you use
+        //that is when the commands will run
+        //mounted runs when the page loads
+        mounted() {
+            alert('hallo')
+        },
+
         //This is where you create your data variables
         //These data variables you will be able to use everywhere
         //in the script tags (line 7 to 41) you call these variables with this.VARIABLE_NAME
         //in the html (line 1 to 6) you call these variables with {{VARIABLE_NAME}}
         data() {
             return {
-                name: '',
-                age: 0
+                color: 'yellow'
             }
         },
 
