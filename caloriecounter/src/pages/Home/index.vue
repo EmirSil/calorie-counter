@@ -9,7 +9,7 @@
         //Here you write the name of the component, 
         //ussualy it has the same name as the component file
         //FPage...
-        name: "FPage",
+        name: "Home",
 
         //This is a !lifecycle hook!
         //This will run command you place inside of it

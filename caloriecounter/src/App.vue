@@ -1,29 +1,23 @@
 <template>
   <div id="app">
-
-    
-    <router-link to="/FPage">Home  </router-link>
-    <router-link to="/Login">Login  </router-link>
-    <router-link to="/Register">Register</router-link>
-
-    
+    <app-navigation></app-navigation> 
     <router-view>
-
     </router-view>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppNavigation from './layout/AppNavigation';
+import AppFooter from './layout/AppFooter';
 export default {
   name: 'app',
   components: {
-    
+    AppNavigation,
+    AppFooter
   }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
