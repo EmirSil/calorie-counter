@@ -4,7 +4,7 @@
         <input type="text" placeholder="Please choose a color" v-model="color">
 		the border is turned {{boxHasBorder}}
         <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
-        <add-calories></add-calories>
+        <add-calories :calorieInput="calories">{{calories}}</add-calories>
         
         </div>
     </div>
