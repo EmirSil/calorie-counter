@@ -1,7 +1,8 @@
 <template>
     <div>
         <div style="height: 100px; width: 100px;"></div>
-        <input type="text" v-model="color">
+        <input type="text" placeholder="Please choose a color" v-model="color">
+        <div id="colorbox">{{color}}</div>
     </div>
 </template>
 <script>
@@ -26,7 +27,7 @@
         //in the html (line 1 to 6) you call these variables with {{VARIABLE_NAME}}
         data() {
             return {
-                color: 'yellow'
+                color: ""
             }
         },
 
@@ -38,12 +39,20 @@
             //This is how you write a method
             //literally the same as a function
             //we just drop the name "function" in the beginning 
-            showUser() {
-                //jsCode
-            }
+            changeColor() {
+    var col = document.getElementById("color").value;
+    document.getElementById("colorbox").style.backgroundColor = col;
+}
+
         }
     }
 </script>
 
 <style scoped>
+
+#colorbox {
+    height: 250px;
+    width: 250px;
+    background-color:'col';
+}
 </style>
