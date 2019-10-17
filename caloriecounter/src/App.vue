@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-navigation></app-navigation> 
-    <router-view>
+    <router-view class="fixit">
     </router-view>
     <app-footer></app-footer>
   </div>
@@ -18,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .fixit {
+    padding-bottom: 300px;
+  }
+</style>
