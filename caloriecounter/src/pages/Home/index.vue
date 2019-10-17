@@ -1,7 +1,8 @@
 <template>
     <div>
         <input type="text" placeholder="Please choose a color" v-model="color" @input="changeColor">
-        <color-box :boxColor="color"></color-box>
+		the border is turned {{boxHasBorder}}
+        <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
     </div>
 </template>
 <script>
@@ -32,7 +33,8 @@
         //in the html (line 1 to 6) you call these variables with {{VARIABLE_NAME}}
         data() {
             return {
-                color: ""
+				color: "",
+				boxHasBorder: false
             }
         },
 

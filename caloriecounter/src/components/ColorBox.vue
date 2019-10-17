@@ -23,7 +23,10 @@ export default {
                 this.hasBorder = true
             }*/
             if (this.boxColor != '') this.hasBorder = this.hasBorder == true ? false : true; //when havin only one line we dont need {}
-            
+            //this.$emit has 2 parameters, 1. is the name of the event 2. is the value of the event 
+            //in the parent we get the value with $event and it's called with @NAME OF EVENT
+            this.$emit("onBorderToggle", this.hasBorder);
+
             //this.hasBorder = !this.hasBorder
             //this.hasBorder = this.hasBorder == true ? false : true
 
