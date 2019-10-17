@@ -1,8 +1,11 @@
 <template>
     <div>
-        <input type="text" placeholder="Please choose a color" v-model="color" @input="changeColor">
+        <div class="homediv">
+        <input type="text" placeholder="Please choose a color" v-model="color">
 		the border is turned {{boxHasBorder}}
         <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
+        
+        </div>
     </div>
 </template>
 <script>
@@ -15,7 +18,8 @@
 		name: "Home", 
 
 		components: {
-			ColorBox
+            ColorBox,
+            addcalories
 		},
 
         //This is a !lifecycle hook!
@@ -53,4 +57,12 @@
         }
     }
 </script>
+
+<style scoped>
+   .homediv {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   } 
+</style>
 
