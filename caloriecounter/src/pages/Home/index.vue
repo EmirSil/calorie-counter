@@ -1,16 +1,21 @@
 <template>
     <div>
-        <div style="height: 100px; width: 100px;"></div>
         <input type="text" placeholder="Please choose a color" v-model="color" @input="changeColor">
-        <div id="colorbox">{{color}}</div>
+        <color-box :boxColor="color"></color-box>
     </div>
 </template>
 <script>
+	import ColorBox from "../../components/ColorBox";
+
     export default {
         //Here you write the name of the component, 
         //ussualy it has the same name as the component file
         //FPage...
-        name: "Home",
+		name: "Home", 
+
+		components: {
+			ColorBox
+		},
 
         //This is a !lifecycle hook!
         //This will run command you place inside of it
@@ -39,20 +44,11 @@
             //This is how you write a method
             //literally the same as a function
             //we just drop the name "function" in the beginning 
-            changeColor() {
-                document.getElementById("colorbox").style.backgroundColor = this.color;
+            
                 
-            }
+            
 
         }
     }
 </script>
 
-<style scoped>
-
-#colorbox {
-    height: 250px;
-    width: 250px;
-    background-color:'';
-}
-</style>
