@@ -1,7 +1,7 @@
 <template>
     <div>
         <div style="height: 100px; width: 100px;"></div>
-        <input type="text" placeholder="Please choose a color" v-model="color">
+        <input type="text" placeholder="Please choose a color" v-model="color" @input="changeColor">
         <div id="colorbox">{{color}}</div>
     </div>
 </template>
@@ -18,7 +18,7 @@
         //that is when the commands will run
         //mounted runs when the page loads
         mounted() {
-            alert('hallo')
+            //alert('hallo')
         },
 
         //This is where you create your data variables
@@ -40,9 +40,9 @@
             //literally the same as a function
             //we just drop the name "function" in the beginning 
             changeColor() {
-    var col = document.getElementById("color").value;
-    document.getElementById("colorbox").style.backgroundColor = col;
-}
+                document.getElementById("colorbox").style.backgroundColor = this.color;
+                
+            }
 
         }
     }
@@ -53,6 +53,6 @@
 #colorbox {
     height: 250px;
     width: 250px;
-    background-color:'col';
+    background-color:'';
 }
 </style>
