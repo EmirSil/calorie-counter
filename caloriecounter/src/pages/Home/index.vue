@@ -4,7 +4,7 @@
         <input type="text" placeholder="Please choose a color" v-model="color"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
 		the border is turned {{boxHasBorder}}
         <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
-        <modal-box></modal-box>
+        <modal-box :modalName="home"></modal-box>
         <add-calories></add-calories>
         
         </div>
@@ -13,7 +13,7 @@
 <script>
     import ColorBox from "../../components/ColorBox";
     import AddCalories from "./AddCalories";
-    import ModalBox from "./ModalBox";
+    import ModalBox from "../../components/ModalBox";
 
     export default {
         //Here you write the name of the component, 
@@ -43,7 +43,8 @@
         data() {
             return {
 				color: "",
-				boxHasBorder: false
+                boxHasBorder: false,
+                home: "Home"
             }
         },
 

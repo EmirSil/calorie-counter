@@ -6,20 +6,23 @@
             <color-box :boxColor="black"></color-box>
                         
         </div>
+        <modal-box modalName="flex"></modal-box> <!--OVDJE PROPERTY saljemo kao string A U HOME SALJEMO PREKO DATA-->
     </div>
 </template>
 
 <script>
 import ColorBox from "../../components/ColorBox";
+import ModalBox from "../../components/ModalBox";
 export default {
     components: {
-        ColorBox
+        ColorBox,
+        ModalBox,
     },
     data () {
         return {
             yellow: "green",
             green: "#f2f2f2",
-            black: "purple"
+            black: "purple",
         }
     }
     

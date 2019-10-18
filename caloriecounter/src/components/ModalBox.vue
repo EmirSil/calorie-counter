@@ -9,7 +9,7 @@
       @md-cancel="onCancel"
       @md-confirm="onConfirm" />
 
-    <md-button class="md-primary md-raised" @click="active = true">Confirm</md-button>
+    <md-button class="md-primary md-raised" @click="active = true">{{modalName}}</md-button>
     <span v-if="value">Value: {{ value }}</span>
   </div>
 </template>
@@ -28,7 +28,10 @@ export default {
       onCancel () {
         this.value = 'Disagreed'
       }
-    }
+    },
+    props: [
+      "modalName"
+    ]
 }
 </script>
 
