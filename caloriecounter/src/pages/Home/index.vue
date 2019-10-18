@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="homediv">
-        <input type="text" placeholder="Please choose a color" v-model="color">
+        <input type="text" placeholder="Please choose a color" v-model="color"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
 		the border is turned {{boxHasBorder}}
         <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
-        <add-calories :calorieInput="calories">{{calories}}</add-calories>
+        <add-calories></add-calories>
         
         </div>
     </div>
