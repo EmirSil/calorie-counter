@@ -1,7 +1,7 @@
 <template>
     <div class="boxplay">
 			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + boxColor" @click="toggleBorder">{{boxColor}}</div>
-        </div>
+    </div>
 </template>
 
 <script>

@@ -38,6 +38,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    z-index: 1;
 }
 
 .foot-child {
