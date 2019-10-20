@@ -13,13 +13,7 @@
                 <add-calories :calories="inputCalories"></add-calories>
             </div>
             <div class="c2r2 content">C</div>
-            <div class="c1r1 content">
-                <input type="text" placeholder="Enter circles color" v-model="colorme">
-                <color-circle :colorCircle="colorme" @obBorderToggle="circleHasBorder=$event" :style="'background-color: ' + boxColor"></color-circle>
-            </div>
-            <div class="c2r1 content">A</div>
-            <div class="c1r2 content">B</div>
-            <div class="c2r2 content">C</div>
+            
         </div>
     </div>
 </template>
