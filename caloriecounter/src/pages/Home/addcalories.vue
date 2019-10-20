@@ -30,6 +30,7 @@ export default {
         }
     },
     
+    
     methods: {
         fillList() {
             if (this.calories <= 100) {
@@ -39,6 +40,7 @@ export default {
             else {
                 this.calorieList.push(this.calories);
                 this.showError=false;
+                this.calories='';
             }
         },
         

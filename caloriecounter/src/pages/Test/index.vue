@@ -7,7 +7,9 @@
             </div>
             <div class="c2r1 content">
                 <modal-box :modalName="ime"></modal-box></div>
-            <div class="c1r2 content">B</div>
+            <div class="c1r2 content">
+                <add-calories :calories="inputCalories"></add-calories>
+            </div>
             <div class="c2r2 content">C</div>
             <div class="c1r1 content">
                 <input type="text" placeholder="Enter circles color" v-model="colorme">
@@ -23,11 +25,13 @@
 <script>
 import ColorCircle from "../../components/ColorCircle"
 import ModalBox from "../../components/ModalBox"
+import AddCalories from "../Home/AddCalories"
 
 export default {
     components: {
         ColorCircle,
         ModalBox,
+        AddCalories,
     },
 
     data() {
@@ -55,22 +59,22 @@ export default {
     }
     
     .c1r1 {
-        height: 250px;
+        height: 300px;
         width: 50vw;
         background-color: aqua;
     }
     .c2r1 {
-        height: 250px;
+        height: 300px;
         width: 50vw;
         background-color: green;
     }
     .c1r2 {
-        height: 250px;
+        height: 300px;
         width: 50vw;
         background-color: blueviolet;
     }
     .c2r2 {
-        height: 250px;
+        height: 300px;
         width: 50vw;
         background-color: chocolate;
     }
