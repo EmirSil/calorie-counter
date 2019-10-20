@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="heading"><h1>CALORIES</h1></div>
-        <input id="rantxt" type="number" placeholder="Enter number of calories" v-model="calories" @keyup.enter="fillList"> <!-- keyup.enter activate function-->
+        <md-field>
+            <label>Initial Value</label>
+            <md-input id="rantxt" type="number" placeholder="Enter number of calories" v-model="calories" @keyup.enter="fillList"></md-input> <!-- keyup.enter activate function-->
+        </md-field>
         <div v-if="showError">The calories must be over a 100</div><!-- ako je showError true odradi div -->
         <div class="list">
             <ul class="lista">

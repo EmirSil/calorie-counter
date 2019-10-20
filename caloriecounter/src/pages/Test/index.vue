@@ -2,7 +2,9 @@
     <div class="main">
         <div class="main-container">
             <div class="c1r1 content">Circle Color
-                <input type="text" placeholder="Enter circles color" v-model="colorme">
+                <md-field>
+                    <md-input type="text" placeholder="Enter circles color" v-model="colorme"></md-input>
+                </md-field>
                 <color-circle :colorCircle="colorme" @obBorderToggle="circleHasBorder=$event" :style="'background-color: ' + boxColor"></color-circle>
             </div>
             <div class="c2r1 content">

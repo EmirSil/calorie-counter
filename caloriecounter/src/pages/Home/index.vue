@@ -1,11 +1,13 @@
 <template>
     <div>
         <div class="homediv">
-        <input type="text" placeholder="Please choose a color" v-model="color"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
-		the border is turned {{boxHasBorder}}
-        <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
-        <modal-box :modalName="home"></modal-box>
-        <add-calories></add-calories>
+            <md-field>
+                <md-input type="text" placeholder="Please choose a color" v-model="color"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
+                the border is turned {{boxHasBorder}}</md-input>
+            </md-field>
+            <color-box :boxColor="color" @onBorderToggle="boxHasBorder=$event"></color-box>
+            <modal-box :modalName="home"></modal-box>
+            <add-calories></add-calories>
         
         </div>
     </div>
