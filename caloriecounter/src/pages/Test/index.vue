@@ -5,7 +5,8 @@
                 <input type="text" placeholder="Enter circles color" v-model="colorme">
                 <color-circle :colorCircle="colorme" @obBorderToggle="circleHasBorder=$event" :style="'background-color: ' + boxColor"></color-circle>
             </div>
-            <div class="c2r1 content">A</div>
+            <div class="c2r1 content">
+                <modal-box :modalName="ime"></modal-box></div>
             <div class="c1r2 content">B</div>
             <div class="c2r2 content">C</div>
             <div class="c1r1 content">
@@ -21,16 +22,19 @@
 
 <script>
 import ColorCircle from "../../components/ColorCircle"
+import ModalBox from "../../components/ModalBox"
 
 export default {
     components: {
-        ColorCircle
+        ColorCircle,
+        ModalBox,
     },
 
     data() {
         return {
             colorme: "",
             circleHasBorder: false,
+            ime: "Test",
         }
     },
 }
