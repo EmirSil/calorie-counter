@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="circle">
-            <div id="color"   :style="'background-color: ' + coloring">
-                <span id="message" v-if="hoverSelector" @mouseover="hover=true" @mouseleave="hover=false">Hello</span>
+            <div id="color" v-show="showing" @mouseover="hover=true" @mouseleave="hover=false" :style="'background-color: ' + coloring" @click="hideMe">
+                <span id="message" v-if="hover">Hello</span>
             </div>
         </div>
     </div>
@@ -15,6 +15,7 @@ export default {
         return {
             hover: false,
             coloring: "#fff",
+            showing: true,
         }
     },
     props: [
@@ -23,14 +24,23 @@ export default {
     ],
     
     methods: {
-        /*showText() {
-            if (this.hoverSelector) {
-                mouseover="hover=true";
-                mouseleave="hover=false";
+        hideMe() {
+             this.showing = this.showing == true ? false: true;
+             setTimeout(function(){
+                 this.showing == "true";
+                 alert("Guess Who's Back"); }, 3000);
+
+        },
+        showText() {
+            if (this.hover == true) {
+                display="abab";
+                
             }
-            else alert="hello";
-        }*/
+            else display="Not hello";
+            
+        }
     },
+    
 }
 </script>
 
