@@ -12,7 +12,13 @@
             <div class="c1r2 content">
                 <add-calories :calories="inputCalories"></add-calories>
             </div>
-            <div class="c2r2 content">C</div>
+            <div class="c2r2 content">
+                <label>MAGIC CIRCLE</label>
+                <md-field>
+                    <md-input type="text" placeholder="Enter a color" v-model="changeColor"></md-input>
+                </md-field>
+                <magic-circle :coloring="changeColor"></magic-circle>
+            </div>
             
         </div>
     </div>
@@ -22,12 +28,14 @@
 import ColorCircle from "../../components/ColorCircle"
 import ModalBox from "../../components/ModalBox"
 import AddCalories from "../Home/AddCalories"
+import MagicCircle from "../../components/MagicCircle"
 
 export default {
     components: {
         ColorCircle,
         ModalBox,
         AddCalories,
+        MagicCircle,
     },
 
     data() {
@@ -35,6 +43,7 @@ export default {
             colorme: "",
             circleHasBorder: false,
             ime: "Test",
+            changeColor: "blue"
         }
     },
 }
