@@ -1,0 +1,6 @@
+ZADATCI:
+
+1. DODATI OPCIJU DA SE ISKLJUCI UKLJUCI HOVER
+2. DODATI KLIK za nestajanje kruga i pri pojavi da se izbaci alert
+
+@mouseover="hover=true" @mouseleave="hover=false"

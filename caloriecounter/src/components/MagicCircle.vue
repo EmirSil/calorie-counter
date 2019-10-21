@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="circle">
-            <div id="color" @mouseover="hover=true" @mouseleave="hover=false" :style="'background-color: ' + coloring">
-                <span id="message" v-if="hover">Hello</span>
+            <div id="color"   :style="'background-color: ' + coloring">
+                <span id="message" v-if="hoverSelector" @mouseover="hover=true" @mouseleave="hover=false">Hello</span>
             </div>
         </div>
     </div>
@@ -18,8 +18,19 @@ export default {
         }
     },
     props: [
-        "coloring"
+        "coloring",
+        "hoverSelector"
     ],
+    
+    methods: {
+        /*showText() {
+            if (this.hoverSelector) {
+                mouseover="hover=true";
+                mouseleave="hover=false";
+            }
+            else alert="hello";
+        }*/
+    },
 }
 </script>
 
