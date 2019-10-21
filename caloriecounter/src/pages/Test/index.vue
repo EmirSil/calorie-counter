@@ -17,8 +17,8 @@
                 <md-field>
                     <md-input type="text" placeholder="Enter a color" v-model="changeColor"></md-input>
                 </md-field>
-                <magic-circle :coloring="changeColor" :hoverSelector="showOption"></magic-circle>
-                <md-switch v-model="showOption">Enable/Disable Hover</md-switch>
+                <magic-circle :coloring="changeColor" ></magic-circle>
+                <md-switch v-model="showOption" :hoverSelector="showOption">Enable/Disable Hover</md-switch>
                 
             </div>
             
