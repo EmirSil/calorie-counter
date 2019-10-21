@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="circle">
-            <div id="circlecolor" :class="{'blue-border':hasBorder}" :style="'background-color: ' + colorCircle" @click="toggleBorder"></div>
+            
+            <div id="circlecolor" :class="{'blue-border':hasBorder}" :style="'background-color: ' + colorCircle" @click="toggleBorder" @mouseover="hover=true" @mouseleave="hover=false">
+                <span id="message" v-if="hover"> Hello</span>
+            </div>
         </div>
     </div>
 </template>
@@ -14,6 +17,7 @@ export default {
     data() {
         return {
             hasBorder: false,
+            hover: false,
         }
     },
     methods: {
@@ -27,6 +31,8 @@ export default {
 
 <style scoped>
 #circlecolor {
+    display: flex;
+    justify-content: center;
     height: 150px;
     width: 150px;
     background-color: '';
@@ -35,5 +41,12 @@ export default {
 
 .blue-border {
     border: 15px solid blue;
+}
+#message {
+    display: flex;
+    color:blueviolet;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 </style>
