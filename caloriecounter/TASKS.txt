@@ -1,6 +1,9 @@
 ZADATCI:
 
-1. DODATI OPCIJU DA SE ISKLJUCI UKLJUCI HOVER
-2. DODATI KLIK za nestajanje kruga i pri pojavi da se izbaci alert
+1. DODATI OPCIJU DA SE ISKLJUCI UKLJUCI HOVER: NOT WORKING
+2. DODATI KLIK za nestajanje kruga i pri pojavi da se izbaci alert: DONE
+3. DODATI $EMIT za INPUT NA INDEX HOMEA: NOT DONE
+4. CREATE COMPONENTS: NOT DONE
 
 @mouseover="hover=true" @mouseleave="hover=false"
+

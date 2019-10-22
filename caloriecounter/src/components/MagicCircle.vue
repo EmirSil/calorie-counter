@@ -25,7 +25,6 @@ export default {
     
     methods: {
         hideMe() {
-            
             this.showing = false;
             setTimeout(() => this.showing = true, 2999)
             setTimeout(function(){

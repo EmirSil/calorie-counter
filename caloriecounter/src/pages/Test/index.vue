@@ -28,7 +28,7 @@
                 </md-field>
             </div>
             <div class="content">
-                <reactive-component></reactive-component>
+                <reactive>Showme</reactive>
             </div>
         </div>
     </div>    
@@ -40,7 +40,7 @@ import ColorCircle from "../../components/ColorCircle"
 import ModalBox from "../../components/ModalBox"
 import AddCalories from "../Home/AddCalories"
 import MagicCircle from "../../components/MagicCircle"
-import ReactiveComponent from "../../components/ReactiveComponent"
+import Reactive from "./Reactive"
 
 export default {
     components: {
@@ -48,7 +48,7 @@ export default {
         ModalBox,
         AddCalories,
         MagicCircle,
-        ReactiveComponent,
+        Reactive,
     },
 
     data() {
@@ -59,6 +59,7 @@ export default {
             changeColor: "blue",
             showOption: '',
             boxCol: '',
+            
         }
     },
     methods: {
@@ -107,7 +108,7 @@ export default {
         background-color: chocolate;
     }
     .content {
-        height: 300px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
