@@ -15,7 +15,7 @@ export default {
         return {
             hover: false,
             coloring: "#fff",
-            showing: true,
+            showing: 'true',
         }
     },
     props: [
@@ -25,24 +25,21 @@ export default {
     
     methods: {
         hideMe() {
-             this.showing = this.showing == true ? false: true;
-             setTimeout(function(){
-                 this.showing == "true";
-                 alert("Guess Who's Back"); }, 3000);
-
-        },
-        showText() {
-            if (this.hover == true) {
-                display="abab";
-                
-            }
-            else display="Not hello";
+            
+            this.showing = false;
+            setTimeout(() => this.showing = true, 2999)
+            setTimeout(function(){
+                alert("Guess Who's Back"); }, 3000);
             
         }
     },
+        
     
+    created() {
+            
+    }
 }
-</script>
+    </script>
 
 <style scoped>
 #color {
