@@ -21,7 +21,15 @@
                 <md-switch v-model="showOption" :hoverSelector="showOption">Enable/Disable Hover</md-switch>
                 
             </div>
-            
+            <div class="content">
+                <label> ENTER BOX COLOR</label>
+                <md-field>
+                    <md-input type ="text" placeholder="enter a color" v-model="boxCol" @keyup="toggleColor"></md-input>
+                </md-field>
+            </div>
+            <div class="content">
+                <reactive-component></reactive-component>
+            </div>
         </div>
     </div>    
    
@@ -32,6 +40,7 @@ import ColorCircle from "../../components/ColorCircle"
 import ModalBox from "../../components/ModalBox"
 import AddCalories from "../Home/AddCalories"
 import MagicCircle from "../../components/MagicCircle"
+import ReactiveComponent from "../../components/ReactiveComponent"
 
 export default {
     components: {
@@ -39,6 +48,7 @@ export default {
         ModalBox,
         AddCalories,
         MagicCircle,
+        ReactiveComponent,
     },
 
     data() {
@@ -48,8 +58,17 @@ export default {
             ime: "Test",
             changeColor: "blue",
             showOption: '',
+            boxCol: '',
         }
     },
+    methods: {
+        toggleColor() {
+            this.$emit("toggleColor", this.boxCol);
+        }
+    },
+    props: [
+        "differentColor",
+    ]
 }
 </script>
 
@@ -88,6 +107,7 @@ export default {
         background-color: chocolate;
     }
     .content {
+        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
