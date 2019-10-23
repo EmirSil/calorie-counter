@@ -1,17 +1,25 @@
 <template>
     <div class="boxplay">
-			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + boxColor" @click="toggleBorder">{{boxColor}}</div>
+			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + msg" @click="toggleBorder">{{boxColor}}</div>
+            <md-field>
+            <md-input type="text" placeholder="Please choose a color" v-model="message" @input="changeMessage"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
+            </md-input>
+            </md-field>
+            
+            <!--<p>{{ message }}</p>-->
     </div>
 </template>
 
 <script>
 export default {
     props: [
-        "boxColor"
+        "boxColor",
+        "msg"
     ],
     data () {
         return {
             hasBorder: false,
+            message: '',
         }
     },
     methods: {
@@ -30,6 +38,9 @@ export default {
             //this.hasBorder = !this.hasBorder
             //this.hasBorder = this.hasBorder == true ? false : true
 
+        },
+        changeMessage(event) {
+            this.$emit("messageChanged", this.message);
         }
     },
 }
