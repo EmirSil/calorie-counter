@@ -5,5 +5,8 @@ ZADATCI:
 3. DODATI $EMIT za INPUT NA INDEX HOMEA: NOT DONE
 4. CREATE COMPONENTS: NOT DONE
 
+5. Create component where USER WRITES ON PARENT,
+        and IT gets array of objects i ispisuje ih sa v-for
+
 @mouseover="hover=true" @mouseleave="hover=false"
 

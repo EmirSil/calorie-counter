@@ -22,10 +22,8 @@
                 
             </div>
             <div class="content">
-                <label> ENTER BOX COLOR</label>
-                <md-field>
-                    <md-input type ="text" placeholder="enter a color" v-model="boxCol" @keyup="toggleColor"></md-input>
-                </md-field>
+                <color-box></color-box>
+                
             </div>
             <div class="content">
                 <reactive>Showme</reactive>
@@ -41,6 +39,7 @@ import ModalBox from "../../components/ModalBox"
 import AddCalories from "../Home/AddCalories"
 import MagicCircle from "../../components/MagicCircle"
 import Reactive from "./Reactive"
+import ColorBox from "../../components/ColorBox"
 
 export default {
     components: {
@@ -49,6 +48,7 @@ export default {
         AddCalories,
         MagicCircle,
         Reactive,
+        ColorBox,
     },
 
     data() {
@@ -58,13 +58,13 @@ export default {
             ime: "Test",
             changeColor: "blue",
             showOption: '',
-            boxCol: '',
+            message: '',
             
         }
     },
     methods: {
         toggleColor() {
-            this.$emit("toggleColor", this.boxCol);
+            this.$root.$emit("colorToggle", this.message);
         }
     },
     props: [

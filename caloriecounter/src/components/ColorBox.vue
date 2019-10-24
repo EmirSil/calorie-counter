@@ -1,17 +1,17 @@
 <template>
     <div class="boxplay">
-			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + msg" @click="toggleBorder">{{boxColor}}</div>
-            <md-field>
-            <md-input type="text" placeholder="Please choose a color" v-model="message" @input="changeMessage"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
-            </md-input>
-            </md-field>
-            
-            <!--<p>{{ message }}</p>-->
+			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + message" @click="toggleBorder">{{boxColor}}</div>
+            <input-component @colorChanged="message=$event"> {{message}}</input-component>
     </div>
 </template>
 
 <script>
+import InputComponent from "./InputComponent"
 export default {
+    components: {
+        InputComponent
+    },
+    
     props: [
         "boxColor",
         "msg"
@@ -19,7 +19,9 @@ export default {
     data () {
         return {
             hasBorder: false,
+            colToggle: '',
             message: '',
+            
         }
     },
     methods: {
@@ -39,9 +41,7 @@ export default {
             //this.hasBorder = this.hasBorder == true ? false : true
 
         },
-        changeMessage(event) {
-            this.$emit("messageChanged", this.message);
-        }
+        
     },
 }
 </script>
