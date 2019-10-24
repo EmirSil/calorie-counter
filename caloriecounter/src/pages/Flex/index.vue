@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="parent-div">
-            <color-box :boxColor="yellow"></color-box>
-            <color-box :boxColor="green"></color-box>
-            <color-box :boxColor="black"></color-box>
+            <color-box :boxColor="yellow" @onBorderToggle="boxHasBorder=$event"></color-box>
+            <color-box :boxColor="green" @onBorderToggle="boxHasBorder=$event"></color-box>
+            <color-box :boxColor="black" @onBorderToggle="boxHasBorder=$event"></color-box>
                         
         </div>
         <modal-box modalName="flex"></modal-box> <!--OVDJE PROPERTY saljemo kao string A U HOME SALJEMO PREKO DATA-->
@@ -23,6 +23,7 @@ export default {
             yellow: "green",
             green: "#f2f2f2",
             black: "purple",
+            boxHasBorder: false,
         }
     }
     

@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             hover: false,
-            coloring: "#fff",
+            colored: "#fff",
             showing: 'true',
         }
     },

@@ -8,8 +8,7 @@
             <color-box :msg="color" @onBorderToggle="boxHasBorder=$event"></color-box>
             <modal-box :modalName="home"></modal-box>
             <add-calories></add-calories>
-            <color-box  :msg="color" @messageChanged="color=$event" >{{ message }}</color-box>
-
+            
         </div>
     </div>
 </template>
@@ -48,7 +47,7 @@
 				color: "",
                 boxHasBorder: false,
                 home: "Home",
-                message: ''
+                
             }
         },
 

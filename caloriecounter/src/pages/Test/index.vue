@@ -22,7 +22,8 @@
                 
             </div>
             <div class="content">
-                <color-box></color-box>
+                <color-box :style="'background-color: ' + message2" @onBorderToggle="boxHasBorder=$event"></color-box>
+                <input-component @colorChanged="message2=$event"> {{message2}}</input-component>
                 
             </div>
             <div class="content">
@@ -40,6 +41,7 @@ import AddCalories from "../Home/AddCalories"
 import MagicCircle from "../../components/MagicCircle"
 import Reactive from "./Reactive"
 import ColorBox from "../../components/ColorBox"
+import InputComponent from "../../components/InputComponent"
 
 export default {
     components: {
@@ -49,6 +51,7 @@ export default {
         MagicCircle,
         Reactive,
         ColorBox,
+        InputComponent
     },
 
     data() {
@@ -58,18 +61,16 @@ export default {
             ime: "Test",
             changeColor: "blue",
             showOption: '',
-            message: '',
+            message2: '',
+            boxHasBorder: false,
+            boxColor: '',
+            inputCalories: '',
             
         }
     },
-    methods: {
-        toggleColor() {
-            this.$root.$emit("colorToggle", this.message);
-        }
-    },
-    props: [
-        "differentColor",
-    ]
+    
+        
+    
 }
 </script>
 

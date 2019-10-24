@@ -1,17 +1,14 @@
 <template>
     <div class="boxplay">
-			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + message" @click="toggleBorder">{{boxColor}}</div>
-            <input-component @colorChanged="message=$event"> {{message}}</input-component>
+			<div id="colorbox" :class="{'red-border':hasBorder}" :style="'background-color: ' + boxColored" @click="toggleBorder">{{boxColor}}</div>
+            
     </div>
 </template>
 
 <script>
-import InputComponent from "./InputComponent"
+
 export default {
-    components: {
-        InputComponent
-    },
-    
+
     props: [
         "boxColor",
         "msg"
@@ -19,8 +16,7 @@ export default {
     data () {
         return {
             hasBorder: false,
-            colToggle: '',
-            message: '',
+            boxColored: ''
             
         }
     },
