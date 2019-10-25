@@ -27,8 +27,9 @@
                 
             </div>
             <div class="content">
-                <reactive>Showme</reactive>
+                <input-form></input-form>
             </div>
+            
         </div>
     </div>    
    
@@ -39,9 +40,9 @@ import ColorCircle from "../../components/ColorCircle"
 import ModalBox from "../../components/ModalBox"
 import AddCalories from "../Home/AddCalories"
 import MagicCircle from "../../components/MagicCircle"
-import Reactive from "./Reactive"
 import ColorBox from "../../components/ColorBox"
 import InputComponent from "../../components/InputComponent"
+import InputForm from "../../components/InputForm"
 
 export default {
     components: {
@@ -49,9 +50,9 @@ export default {
         ModalBox,
         AddCalories,
         MagicCircle,
-        Reactive,
         ColorBox,
-        InputComponent
+        InputComponent,
+        InputForm
     },
 
     data() {
