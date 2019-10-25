@@ -6,6 +6,13 @@
             <md-input type="text" placeholder="Enter your Surname" v-model="newUser.surname"></md-input>
             <md-button class="md-raised md-primary" @click.prevent="fillArray">Submit</md-button>
         </md-field>
+        <label>Show Users</label>
+        <div v-for="user in users">
+            <div v-for="(val,key) in user">
+                <p>{{key}} : {{val}}</p>
+                
+            </div>
+        </div>
         
     </div>
 </template>
@@ -13,11 +20,11 @@
 <script>
 export default {
     data() {
-        let myArray = {
+        /*let myArray = {
                     nameList:[],
                     nicknameList:[],
                     surnameList:[],
-                }
+                }*/
         return {
             name: null,
             surname: null,
