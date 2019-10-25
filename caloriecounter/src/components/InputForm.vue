@@ -6,6 +6,7 @@
             <md-input type="text" placeholder="Enter your Surname" v-model="surname"></md-input>
             <md-button class="md-raised md-primary" @click.prevent="fillArray">Submit</md-button>
         </md-field>
+        
     </div>
 </template>
 
