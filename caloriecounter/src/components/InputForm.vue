@@ -10,8 +10,8 @@
         <div v-for="user in users">
             <div v-for="(val,key) in user">
                 <p>{{key}} : {{val}}</p>
-                
             </div>
+            <hr>
         </div>
         
     </div>
@@ -29,8 +29,14 @@ export default {
             name: null,
             surname: null,
             nickname: null,
-            newUser: {},
-            users: []
+            newUser: {
+                name: "",
+                nickname: "",
+                surname: ""
+            },
+            users: [
+
+            ]
                 
 
             

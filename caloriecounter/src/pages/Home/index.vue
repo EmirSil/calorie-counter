@@ -5,7 +5,7 @@
                 <md-input type="text" placeholder="Please choose a color" v-model="color"> <!-- WHATEVER IS IN V-MODEL NEEDS TO BE PUT IN DATA!!!!!!!!!!!!-->
                 the border is turned {{boxHasBorder}}</md-input>
             </md-field>
-            <color-box :msg="color" @onBorderToggle="boxHasBorder=$event"></color-box>
+            <color-box :boxColored="color" @onBorderToggle="boxHasBorder=$event"></color-box>
             <modal-box :modalName="home"></modal-box>
             <add-calories></add-calories>
             

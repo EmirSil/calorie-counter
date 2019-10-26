@@ -25,10 +25,13 @@ export default {
     
     methods: {
         hideMe() {
+            let self= this;
             this.showing = false;
-            setTimeout(() => this.showing = true, 2999)
-            setTimeout(function(){
-                alert("Guess Who's Back"); }, 3000);
+            setTimeout(
+                function(){
+                    self.showing = true; 
+                    alert("Guess Who's Back");                  
+                }, 3000);
             
         }
     },

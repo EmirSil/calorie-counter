@@ -32,6 +32,9 @@
             <div class="content">
                 <input-form></input-form>
             </div>
+            <div class="content">
+                <for-loop></for-loop>
+            </div>
             
         </div>
     </div>    
@@ -47,6 +50,7 @@ import ColorBox from "../../components/ColorBox"
 import InputComponent from "../../components/InputComponent"
 import Reactive from "./Reactive"
 import InputForm from "../../components/InputForm"
+import ForLoop from "../../components/ForLoop"
 
 export default {
     components: {
@@ -57,7 +61,8 @@ export default {
         ColorBox,
         InputComponent,
         Reactive,
-        InputForm
+        InputForm,
+        ForLoop
     },
 
     data() {
@@ -122,5 +127,6 @@ export default {
         border: 1px solid red;
         padding: 10px;
         width: 50%;
+        overflow-y:auto
     }
 </style>

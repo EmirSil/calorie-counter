@@ -11,7 +11,8 @@ export default {
 
     props: [
         "boxColor",
-        "msg"
+        "msg",
+        "boxColored"
     ],
     data () {
         return {

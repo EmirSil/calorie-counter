@@ -10,3 +10,23 @@ ZADATCI:
 
 @mouseover="hover=true" @mouseleave="hover=false"
 
+
+
+ generateNumbers(to){
+            this.lotoNumbers= [];
+            for(let i = 1; i<=to; i++){
+                let randomNumber= Math.ceil(Math.random() * 48)
+                for(let j=0; j<this.lotoNumbers.length; j++){
+                    if(randomNumber == this.lotoNumbers[j]){
+                        randomNumber= Math.ceil(Math.random() * 48);
+                        j=-1;
+                    }
+                }
+                this.lotoNumbers.push(randomNumber)
+                
+
+            }
+
+            PRACTICE REUSABILITY OF FUNCTIONS
+            
+

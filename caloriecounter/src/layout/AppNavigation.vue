@@ -8,6 +8,7 @@
 				<md-button class="md-primary" to="/register">Register</md-button>
 				<md-button class="md-primary" to="/flex">Flex</md-button>
 				<md-button class="md-primary" to="/test">Test</md-button>
+				<md-button class="md-primary" to="/loto">Lotto</md-button>
 			</div>
     	</md-toolbar>
     </div> 
